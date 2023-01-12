@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  java:
+    ports:
+      - 8080:8080
+    build: ./ECF_Back
+    depends_on:
+      - mongo
+  app:
+    ports: 
+      - 3000:3000
+    build: 
+      ./ECF-Front
+    depends_on:
+      - java

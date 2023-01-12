@@ -1,0 +1,11 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  banner:
+    location: classpath:pingu.txt
+  data:
+    mongodb:
+      database: java-to-dev-api
+      port: 27017
+      host: mongo
